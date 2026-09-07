@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Los Santos Police Department</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #ffffff;
+            color: #20252b;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1080px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 70px;
+            background: #20252a;
+        }
+
+        .nav-inner {
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .nav-menu a {
+            color: #bfc3c8;
+            font-size: 10px;
+            transition: 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: #20252a;
+            min-height: 365px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 90px;
+        }
+
+        .hero-content {
+            width: 380px;
+        }
+
+        .hero-content h1 {
+            color: #ffffff;
+
+            font-size: 29px;
+            line-height: 1.2;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            color: #aeb4ba;
+
+            font-size: 11px;
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 9px 15px;
+
+            border-radius: 4px;
+
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .btn-blue {
+    background: #1677ed;
+    color: white;
+
+    /* Animasi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-blue:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+        
+
+        .btn-outline {
+    background: #c4c7ca;
+    color: white;
+
+    /* Animasi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+        .hero-image {
+    width: 370px;
+    height: 245px;
+
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits {
+            background: #ffffff;
+
+            padding: 55px 0 60px;
+        }
+
+        .benefits-inner {
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            gap: 40px;
+        }
+
+        .benefits-title h2 {
+            font-size: 18px;
+            line-height: 1.25;
+
+            color: #20252a;
+        }
+
+        .benefits-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            column-gap: 45px;
+            row-gap: 32px;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 13px;
+        }
+
+        .benefit-icon {
+            width: 27px;
+            height: 27px;
+
+            min-width: 27px;
+
+            background: #1677ed;
+            color: white;
+
+            border-radius: 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 11px;
+        }
+
+        .benefit h3 {
+            font-size: 11px;
+            font-weight: 600;
+
+            margin-bottom: 5px;
+        }
+
+        .benefit p {
+            font-size: 8px;
+            line-height: 1.65;
+
+            color: #62666b;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote-section {
+            background: #f7f7f7;
+
+            padding: 60px 20px;
+        }
+
+        .quote-box {
+            max-width: 540px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 12px;
+            line-height: 1.8;
+
+            font-style: italic;
+
+            color: #292929;
+        }
+
+        .quote-author {
+            margin-top: 18px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 9px;
+        }
+
+        .quote-author img {
+            width: 24px;
+            height: 24px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+        }
+
+        .quote-author span {
+            font-size: 8px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           BLOG
+        ========================= */
+
+        .blog {
+            background: #ffffff;
+
+            padding: 50px 0 75px;
+        }
+
+        .blog-heading {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .blog-heading h2 {
+            font-size: 19px;
+
+            margin-bottom: 5px;
+        }
+
+        .blog-heading p {
+            color: #777;
+
+            font-size: 10px;
+
+            max-width: 450px;
+            margin: auto;
+
+            line-height: 1.5;
+        }
+
+        .blog-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .blog-card {
+            background: white;
+
+            border-radius: 4px;
+
+            overflow: hidden;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+
+            /* Efek saat kursor diarahkan ke card */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.20);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 120px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: 14px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            background: #e4f0ff;
+            color: #1677ed;
+
+            padding: 3px 7px;
+
+            border-radius: 5px;
+
+            font-size: 7px;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .tag.media {
+            background: #e7e4ff;
+            color: #6049d8;
+        }
+
+        .blog-content h3 {
+            font-size: 12px;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .blog-content > p {
+            font-size: 8px;
+
+            color: #666;
+
+            line-height: 1.6;
+
+            min-height: 40px;
+
+            margin-bottom: 20px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+        }
+
+        .avatar {
+            width: 22px;
+            height: 22px;
+
+            border-radius: 50%;
+
+            background: #39424b;
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 8px;
+        }
+
+        .author-name {
+            display: block;
+
+            font-size: 8px;
+            font-weight: 600;
+        }
+
+        .author-date {
+            display: block;
+
+            color: #777;
+
+            font-size: 7px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #20252a;
+
+            padding: 15px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p,
+        footer a {
+            color: #d5d5d5;
+
+            font-size: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 10px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-inner {
+                flex-direction: column;
+
+                gap: 35px;
+
+                padding: 50px 0;
+            }
+
+            .hero-content {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .benefits-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-inner">
+
+            <a href="#" class="logo">
+                <img src="https://cdn.phototourl.com/free/2026-09-06-7dc1951a-fa01-4f71-badb-a047cb4e7e20.png" alt="LSPD Logo">
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#">Portfolio</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="container hero-inner">
+
+            <div class="hero-content">
+
+                <h1>
+                    Los Santos Police Department<br>
+                    Office
+                </h1>
+
+                <p>
+                    Welcome to LSPD, here you can see information about the department
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="https://discord.com/channels/1348520910318997604/1356295358216409259"
+   class="btn btn-blue"
+   target="_blank">
+    Benefits Check
+</a>
+
+
+                    <a href="#" class="btn btn-outline">
+                        LSPD Website
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="https://cdn.phototourl.com/member/2026-09-07-efcc449e-cf2a-4340-bf51-8848c3618f8d.jpg"
+                    alt="LSPD Car"
+                />
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BENEFITS
+    ========================= -->
+
+    <section class="benefits">
+
+        <div class="container benefits-inner">
+
+
+            <div class="benefits-title">
+
+                <h2>
+                    Benefits you can get<br>
+                    from joining LSPD:
+                </h2>
+
+            </div>
+
+
+            <div class="benefits-grid">
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-suitcase-medical"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Great medical and dental benefits
+                        </h3>
+
+                        <p>
+                            You will get quality health services 
+                            or excellence in the medical field, and improve care and health.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Variety of job opportunities
+                        </h3>
+
+                        <p>
+                            Job opportunities give you the option to explore various fields and industries. 
+                            This allows you to choose a career that suits your interests, skills and goals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Exceptionals pension plans
+                        </h3>
+
+                        <p>
+                            By offering better, extraordinary retirement plans can increase participant satisfaction. 
+                            This can strengthen employee loyalty to the company and create a positive image for company 
+                            in eyes of employees.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Paid military leave
+                        </h3>
+
+                        <p>
+                            Financial Support getting paid during military leave, 
+                            employees can focus completely on their duties and responsibilities in military 
+                            without having to worry about their personal finances or family needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Full salary & Benefits while you train
+                        </h3>
+
+                        <p>
+                            Rewarding Performance full salary 
+                            can be considered as a reward for good performance and 
+                            contribution to the job. This can be a motivation for employees 
+                            to continue to provide good results.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUOTE
+    ========================= -->
+
+    <section class="quote-section">
+
+        <div class="quote-box">
+
+            <p class="quote-text">
+
+                "Justice is Upheld, Rights are Protected, Society is Supported.
+                We, protectors of the law, defend justice, respect human rights,
+                and strengthen the law foundation to promote security and shared
+                prosperity in a just and harmonious society."
+
+            </p>
+
+
+            <div class="quote-author">
+
+                <img src="https://cdn.phototourl.com/free/2026-09-06-7dc1951a-fa01-4f71-badb-a047cb4e7e20.png" alt="LSPD">
+
+                <div class="container footer-inner">
+
+        <a href="https://cdn.phototourl.com/member/2026-09-07-84441c01-fdaf-493f-bcea-fc79ad63e880.png" target="_blank">
+            Captain III Emilly Calloway
+        </a>
+
+        <span class="separator">&nbsp;/&nbsp;</span>
+
+        <a href="https://cdn.phototourl.com/member/2026-09-07-229222af-5c42-4387-9887-ba7d0d795fa4.png" target="_blank">
+            Lieutenant II. Gaveriel Gregson
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BLOG
+    ========================= -->
+
+    <section class="blog" id="blog">
+
+        <div class="container">
+
+
+            <div class="blog-heading">
+
+                <h2>
+                    Department News & Updates
+                </h2>
+
+                <p>
+                    Providing real-time, unfiltered information to the public. 
+                    Follow our official blog for community guidelines, department press briefs, 
+                    and operational updates from all LSPD bureaus.
+                </p>
+
+            </div>
+
+
+
+            <div class="blog-grid">
+
+
+                <!-- CARD 1 -->
+
+                <article class="blog-card">
+                    <img
+                        class="blog-image"
+                        src="https://cdn.phototourl.com/member/2026-09-07-70a43bb6-8209-49de-a7a5-b6dc846eb739.jpg"
+                        alt="Officer Training"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="tag">
+                            News
+                        </span>
+
+                        <h3>
+                            Officer training.
+                        </h3>
+
+                        <p>
+                            Training that requires more focus, so that
+                            mistakes don't occur.
+                        </p>
+
+
+                        <div class="author">
+
+                            <div class="avatar">
+                                E
+                            </div>
+
+                            <div>
+
+                                <span class="author-name">
+                                    Fizz, Pebby
+                                </span>
+
+                                <span class="author-date">
+                                    18/05/2025 · 6 min read
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 2 -->
+
+                <article class="blog-card">
+
+                    <img
+                        class="blog-image"
+                        src="https://cdn.phototourl.com/member/2026-09-07-4dad76f6-8a9b-4999-a1fd-625d67618dfd.webp"
+                        alt="Executing suspects with the death penalty"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="tag media">
+                            Media
+                        </span>
+
+                        <h3>
+                            Executing suspects with the death penalty.
+                        </h3>
+
+                        <p>
+                            This Execution Due to committing acts of defiance against SA.Gov.
+                        </p>
+
+
+                        <div class="author">
+
+                            <div class="avatar">
+                                A
+                            </div>
+
+                            <div>
+
+                                <span class="author-name">
+                                    Griggs, Krueger
+                                </span>
+
+                                <span class="author-date">
+                                    05/08/2023 · 10 min read
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 3 -->
+
+                <article class="blog-card">
+
+                    <img
+                        class="blog-image"
+                        src="https://cdn.phototourl.com/member/2026-09-07-4c1fe23f-3731-42d2-b928-49b28dca8c0d.webp"
+                        alt="Photo of Police Officers"
+                    >
+
+                    <div class="blog-content">
+
+                        <span class="tag">
+                            News
+                        </span>
+
+                        <h3>
+                            Photo of Police Officers
+                        </h3>
+
+                        <p>
+                            A photo capturing the essence of our dedicated law enforcement officers in action.
+                        </p>
+                        </p>
+
+
+                        <div class="author">
+
+                            <div class="avatar">
+                                G
+                            </div>
+
+                            <div>
+
+                                <span class="author-name">
+                                    Zack, Geraldo
+                                </span>
+
+                                <span class="author-date">
+                                    17/08/2025 · 4 min read
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container footer-inner">
+    <p>
+        <a href="https://discord.com/channels/1348520910318997604/1356295358216409259" target="_blank">
+            © Los Santos Police Department "To Protect and To Serve"
+        </a>
+    </p>
+</div>
+
+            <div class="footer-links">
+
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
