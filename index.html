@@ -15,535 +15,8 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style>
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Poppins", sans-serif;
-            background: #ffffff;
-            color: #20252b;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1080px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        .navbar {
-            height: 70px;
-            background: #20252a;
-        }
-
-        .nav-inner {
-            height: 70px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo img {
-            width: 45px;
-            height: 45px;
-            object-fit: contain;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        .nav-menu a {
-            color: #bfc3c8;
-            font-size: 10px;
-            transition: 0.2s;
-        }
-
-        .nav-menu a:hover {
-            color: white;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            background: #20252a;
-            min-height: 365px;
-
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 90px;
-        }
-
-        .hero-content {
-            width: 380px;
-        }
-
-        .hero-content h1 {
-            color: #ffffff;
-
-            font-size: 29px;
-            line-height: 1.2;
-
-            font-weight: 700;
-
-            margin-bottom: 10px;
-        }
-
-        .hero-content p {
-            color: #aeb4ba;
-
-            font-size: 11px;
-            line-height: 1.6;
-
-            margin-bottom: 18px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-
-            padding: 9px 15px;
-
-            border-radius: 4px;
-
-            font-size: 10px;
-            font-weight: 500;
-        }
-
-        .btn-blue {
-    background: #1677ed;
-    color: white;
-
-    /* Animasi */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-blue:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-}
-        
-
-        .btn-outline {
-    background: #c4c7ca;
-    color: white;
-
-    /* Animasi */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-outline:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-}
-
-        .hero-image {
-    width: 370px;
-    height: 245px;
-
-    overflow: hidden;
-    border-radius: 4px;
-}
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-        }
-
-
-        /* =========================
-           BENEFITS
-        ========================= */
-
-        .benefits {
-            background: #ffffff;
-
-            padding: 55px 0 60px;
-        }
-
-        .benefits-inner {
-            display: grid;
-
-            grid-template-columns: 220px 1fr;
-
-            gap: 40px;
-        }
-
-        .benefits-title h2 {
-            font-size: 18px;
-            line-height: 1.25;
-
-            color: #20252a;
-        }
-
-        .benefits-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            column-gap: 45px;
-            row-gap: 32px;
-        }
-
-        .benefit {
-            display: flex;
-            gap: 13px;
-        }
-
-        .benefit-icon {
-            width: 27px;
-            height: 27px;
-
-            min-width: 27px;
-
-            background: #1677ed;
-            color: white;
-
-            border-radius: 4px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 11px;
-        }
-
-        .benefit h3 {
-            font-size: 11px;
-            font-weight: 600;
-
-            margin-bottom: 5px;
-        }
-
-        .benefit p {
-            font-size: 8px;
-            line-height: 1.65;
-
-            color: #62666b;
-        }
-
-
-        /* =========================
-           QUOTE
-        ========================= */
-
-        .quote-section {
-            background: #f7f7f7;
-
-            padding: 60px 20px;
-        }
-
-        .quote-box {
-            max-width: 540px;
-            margin: auto;
-
-            text-align: center;
-        }
-
-        .quote-text {
-            font-size: 12px;
-            line-height: 1.8;
-
-            font-style: italic;
-
-            color: #292929;
-        }
-
-        .quote-author {
-            margin-top: 18px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            gap: 9px;
-        }
-
-        .quote-author img {
-            width: 24px;
-            height: 24px;
-
-            border-radius: 50%;
-
-            object-fit: cover;
-        }
-
-        .quote-author span {
-            font-size: 8px;
-            font-weight: 600;
-        }
-
-
-        /* =========================
-           BLOG
-        ========================= */
-
-        .blog {
-            background: #ffffff;
-
-            padding: 50px 0 75px;
-        }
-
-        .blog-heading {
-            text-align: center;
-
-            margin-bottom: 30px;
-        }
-
-        .blog-heading h2 {
-            font-size: 19px;
-
-            margin-bottom: 5px;
-        }
-
-        .blog-heading p {
-            color: #777;
-
-            font-size: 10px;
-
-            max-width: 450px;
-            margin: auto;
-
-            line-height: 1.5;
-        }
-
-        .blog-grid {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .blog-card {
-            background: white;
-
-            border-radius: 4px;
-
-            overflow: hidden;
-
-            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-
-            /* Efek saat kursor diarahkan ke card */
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.20);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 120px;
-
-            object-fit: cover;
-
-            display: block;
-
-            transition: transform 0.4s ease;
-        }
-
-        .blog-card:hover .blog-image {
-            transform: scale(1.05);
-        }
-
-        .blog-content {
-            padding: 14px;
-        }
-
-        .tag {
-            display: inline-block;
-
-            background: #e4f0ff;
-            color: #1677ed;
-
-            padding: 3px 7px;
-
-            border-radius: 5px;
-
-            font-size: 7px;
-            font-weight: 600;
-
-            margin-bottom: 8px;
-        }
-
-        .tag.media {
-            background: #e7e4ff;
-            color: #6049d8;
-        }
-
-        .blog-content h3 {
-            font-size: 12px;
-            font-weight: 600;
-
-            margin-bottom: 8px;
-        }
-
-        .blog-content > p {
-            font-size: 8px;
-
-            color: #666;
-
-            line-height: 1.6;
-
-            min-height: 40px;
-
-            margin-bottom: 20px;
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-
-            gap: 8px;
-        }
-
-        .avatar {
-            width: 22px;
-            height: 22px;
-
-            border-radius: 50%;
-
-            background: #39424b;
-
-            color: white;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 8px;
-        }
-
-        .author-name {
-            display: block;
-
-            font-size: 8px;
-            font-weight: 600;
-        }
-
-        .author-date {
-            display: block;
-
-            color: #777;
-
-            font-size: 7px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #20252a;
-
-            padding: 15px 0;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        footer p,
-        footer a {
-            color: #d5d5d5;
-
-            font-size: 8px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 10px;
-        }
-
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .container {
-                width: 90%;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hero-inner {
-                flex-direction: column;
-
-                gap: 35px;
-
-                padding: 50px 0;
-            }
-
-            .hero-content {
-                width: 100%;
-                text-align: center;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .benefits-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-    </style>
+    <!-- CSS lokal -->
+    <link rel="stylesheet" href="assets/stylesheet/style.css">
 </head>
 
 
@@ -559,7 +32,7 @@
         <div class="container nav-inner">
 
             <a href="#" class="logo">
-                <img src="https://cdn.phototourl.com/free/2026-09-06-7dc1951a-fa01-4f71-badb-a047cb4e7e20.png" alt="LSPD Logo">
+                <img src="https://cdn.phototourl.com/member/2026-09-07-ec224674-b180-46cf-84d3-56e0ffa195b3.png" alt="LSPD Logo">
             </a>
 
             <nav class="nav-menu">
@@ -567,7 +40,7 @@
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#blog">Blog</a>
-                <a href="#">Portfolio</a>
+                <a href="#Structure" id="StructureLink">Structure</a>
 
             </nav>
 
@@ -599,11 +72,10 @@
                 <div class="hero-buttons">
 
                     <a href="https://discord.com/channels/1348520910318997604/1356295358216409259"
-   class="btn btn-blue"
-   target="_blank">
-    Benefits Check
-</a>
-
+                       class="btn btn-blue"
+                       target="_blank">
+                        Benefits Check
+                    </a>
 
                     <a href="#" class="btn btn-outline">
                         LSPD Website
@@ -617,7 +89,7 @@
             <div class="hero-image">
 
                 <img
-                    src="https://cdn.phototourl.com/member/2026-09-07-efcc449e-cf2a-4340-bf51-8848c3618f8d.jpg"
+                    src="https://cdn.phototourl.com/member/2026-09-07-edd17ae8-6611-48d2-bcbc-13e2d0440994.jpg"
                     alt="LSPD Car"
                 />
 
@@ -664,7 +136,7 @@
                         </h3>
 
                         <p>
-                            You will get quality health services 
+                            You will get quality health services
                             or excellence in the medical field, and improve care and health.
                         </p>
 
@@ -687,7 +159,7 @@
                         </h3>
 
                         <p>
-                            Job opportunities give you the option to explore various fields and industries. 
+                            Job opportunities give you the option to explore various fields and industries.
                             This allows you to choose a career that suits your interests, skills and goals.
                         </p>
 
@@ -710,8 +182,8 @@
                         </h3>
 
                         <p>
-                            By offering better, extraordinary retirement plans can increase participant satisfaction. 
-                            This can strengthen employee loyalty to the company and create a positive image for company 
+                            By offering better, extraordinary retirement plans can increase participant satisfaction.
+                            This can strengthen employee loyalty to the company and create a positive image for company
                             in eyes of employees.
                         </p>
 
@@ -734,8 +206,8 @@
                         </h3>
 
                         <p>
-                            Financial Support getting paid during military leave, 
-                            employees can focus completely on their duties and responsibilities in military 
+                            Financial Support getting paid during military leave,
+                            employees can focus completely on their duties and responsibilities in military
                             without having to worry about their personal finances or family needs.
                         </p>
 
@@ -754,13 +226,13 @@
                     <div>
 
                         <h3>
-                            Full salary & Benefits while you train
+                            Full salary &amp; Benefits while you train
                         </h3>
 
                         <p>
-                            Rewarding Performance full salary 
-                            can be considered as a reward for good performance and 
-                            contribution to the job. This can be a motivation for employees 
+                            Rewarding Performance full salary
+                            can be considered as a reward for good performance and
+                            contribution to the job. This can be a motivation for employees
                             to continue to provide good results.
                         </p>
 
@@ -797,19 +269,17 @@
 
             <div class="quote-author">
 
-                <img src="https://cdn.phototourl.com/free/2026-09-06-7dc1951a-fa01-4f71-badb-a047cb4e7e20.png" alt="LSPD">
+                <img src="https://cdn.phototourl.com/member/2026-09-07-ec224674-b180-46cf-84d3-56e0ffa195b3.png" alt="LSPD">
 
-                <div class="container footer-inner">
+                <a href="https://cdn.phototourl.com/member/2026-09-08-33c13d30-4ead-47fd-ae15-76e337567db7.png" target="_blank">
+                    Captain III Erik Gutierrez
+                </a>
 
-        <a href="https://cdn.phototourl.com/member/2026-09-07-84441c01-fdaf-493f-bcea-fc79ad63e880.png" target="_blank">
-            Captain III Emilly Calloway
-        </a>
+                <span class="separator">&nbsp;/&nbsp;</span>
 
-        <span class="separator">&nbsp;/&nbsp;</span>
-
-        <a href="https://cdn.phototourl.com/member/2026-09-07-229222af-5c42-4387-9887-ba7d0d795fa4.png" target="_blank">
-            Lieutenant II. Gaveriel Gregson
-
+                <a href="https://cdn.phototourl.com/member/2026-09-08-99827ab0-7628-4a2f-b4f1-0d801be6c057.png" target="_blank">
+                    Captain II Emily Calloway
+                </a>
 
             </div>
 
@@ -835,8 +305,8 @@
                 </h2>
 
                 <p>
-                    Providing real-time, unfiltered information to the public. 
-                    Follow our official blog for community guidelines, department press briefs, 
+                    Providing real-time, unfiltered information to the public.
+                    Follow our official blog for community guidelines, department press briefs,
                     and operational updates from all LSPD bureaus.
                 </p>
 
@@ -849,7 +319,7 @@
 
                 <!-- CARD 1 -->
 
-                <article class="blog-card">
+                <a class="blog-card" href="https://discord.gg/vYnsfv9q6g" target="_blank">
                     <img
                         class="blog-image"
                         src="https://cdn.phototourl.com/member/2026-09-07-70a43bb6-8209-49de-a7a5-b6dc846eb739.jpg"
@@ -859,7 +329,7 @@
                     <div class="blog-content">
 
                         <span class="tag">
-                            News
+                            Media
                         </span>
 
                         <h3>
@@ -894,13 +364,13 @@
 
                     </div>
 
-                </article>
+                </a>
 
 
 
                 <!-- CARD 2 -->
 
-                <article class="blog-card">
+                <a class="blog-card" href="https://discord.gg/vYnsfv9q6g" target="_blank">
 
                     <img
                         class="blog-image"
@@ -911,7 +381,7 @@
                     <div class="blog-content">
 
                         <span class="tag media">
-                            Media
+                            News
                         </span>
 
                         <h3>
@@ -945,13 +415,13 @@
 
                     </div>
 
-                </article>
+                </a>
 
 
 
                 <!-- CARD 3 -->
 
-                <article class="blog-card">
+                <a class="blog-card" href="https://discord.gg/vYnsfv9q6g" target="_blank">
 
                     <img
                         class="blog-image"
@@ -962,7 +432,7 @@
                     <div class="blog-content">
 
                         <span class="tag">
-                            News
+                            Media
                         </span>
 
                         <h3>
@@ -971,7 +441,6 @@
 
                         <p>
                             A photo capturing the essence of our dedicated law enforcement officers in action.
-                        </p>
                         </p>
 
 
@@ -997,7 +466,7 @@
 
                     </div>
 
-                </article>
+                </a>
 
 
             </div>
@@ -1015,12 +484,11 @@
     <footer>
 
         <div class="container footer-inner">
-    <p>
-        <a href="https://discord.com/channels/1348520910318997604/1356295358216409259" target="_blank">
-            © Los Santos Police Department "To Protect and To Serve"
-        </a>
-    </p>
-</div>
+            <p>
+                <a href="https://discord.gg/vYnsfv9q6g" target="_blank">
+                    © Los Santos Police Department "To Protect and To Serve"
+                </a>
+            </p>
 
             <div class="footer-links">
 
@@ -1034,6 +502,47 @@
 
     </footer>
 
+
+
+    <div id="structureModal" class="structure-modal" aria-hidden="true">
+        <div class="structure-overlay" id="structureOverlay"></div>
+        <div class="structure-modal-content" role="dialog" aria-modal="true" aria-label="Structure">
+            <button class="structure-close" id="structureClose" type="button" aria-label="Close">&times;</button>
+            <img
+                src="https://cdn.phototourl.com/member/2026-09-08-0a5c6026-b7b6-4d7f-82ed-db8cedff72dc.png"
+                alt="Structure LSPD"
+                class="structure-preview"
+            >
+        </div>
+    </div>
+
+    <style>
+        .structure-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:30px}
+        .structure-modal.active{display:flex}
+        .structure-overlay{position:absolute;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(5px)}
+        .structure-modal-content{position:relative;z-index:1;max-width:min(1100px,94vw);max-height:94vh;display:flex;align-items:center;justify-content:center;animation:structureZoom .25s ease}
+        .structure-preview{display:block;max-width:100%;max-height:90vh;width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 20px 70px rgba(0,0,0,.5)}
+        .structure-close{position:absolute;top:-18px;right:-18px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#27313b;font-size:28px;line-height:1;cursor:pointer;z-index:2;box-shadow:0 5px 20px rgba(0,0,0,.3);transition:transform .2s ease,background .2s ease}
+        .structure-close:hover{transform:scale(1.08);background:#f0f0f0}
+        body.structure-open{overflow:hidden}
+        @keyframes structureZoom{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+        @media(max-width:600px){.structure-modal{padding:18px}.structure-modal-content{max-width:96vw}.structure-close{top:-12px;right:-8px;width:38px;height:38px;font-size:24px}}
+    </style>
+
+    <script>
+    document.addEventListener("DOMContentLoaded",function(){
+        const link=document.getElementById("StructureLink");
+        const modal=document.getElementById("structureModal");
+        const close=document.getElementById("structureClose");
+        const overlay=document.getElementById("structureOverlay");
+        function openStructure(e){e.preventDefault();modal.classList.add("active");modal.setAttribute("aria-hidden","false");document.body.classList.add("structure-open")}
+        function closeStructure(){modal.classList.remove("active");modal.setAttribute("aria-hidden","true");document.body.classList.remove("structure-open")}
+        link.addEventListener("click",openStructure);
+        close.addEventListener("click",closeStructure);
+        overlay.addEventListener("click",closeStructure);
+        document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.classList.contains("active"))closeStructure()});
+    });
+    </script>
 
 </body>
 </html>
